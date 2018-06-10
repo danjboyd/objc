@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -x
+
+gcc -o test test.c -L`pg_config --libdir` -I`pg_config --includedir`  -lpq 
