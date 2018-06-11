@@ -1,19 +1,16 @@
-obj/Test.obj/PgStmt.m.o: PgStmt.m PgStmt.h \
- /usr/include/GNUstep/Foundation/NSObject.h \
- /usr/include/GNUstep/Foundation/NSObjCRuntime.h \
+obj/Test.obj/DatabaseFactory.m.o: DatabaseFactory.m DatabaseFactory.h \
+ /usr/include/GNUstep/Foundation/Foundation.h \
  /usr/include/GNUstep/GNUstepBase/GSVersionMacros.h \
  /usr/include/GNUstep/GNUstepBase/GSConfig.h \
+ /usr/include/GNUstep/Foundation/FoundationErrors.h \
+ /usr/include/GNUstep/Foundation/NSObject.h \
+ /usr/include/GNUstep/Foundation/NSObjCRuntime.h \
  /usr/include/GNUstep/GNUstepBase/GNUstep.h \
  /usr/include/GNUstep/GNUstepBase/GSBlocks.h \
  /usr/include/GNUstep/GNUstepBase/GSObjCRuntime.h \
  /usr/include/GNUstep/Foundation/NSZone.h \
  /usr/include/GNUstep/Foundation/NSDate.h \
  /usr/include/GNUstep/GNUstepBase/NSObject+GNUstepBase.h \
- /usr/include/postgresql/libpq-fe.h \
- /usr/include/postgresql/postgres_ext.h \
- /usr/include/postgresql/pg_config_ext.h Statement.h \
- /usr/include/GNUstep/Foundation/Foundation.h \
- /usr/include/GNUstep/Foundation/FoundationErrors.h \
  /usr/include/GNUstep/Foundation/NSDebug.h \
  /usr/include/GNUstep/GNUstepBase/NSDebug+GNUstepBase.h \
  /usr/include/GNUstep/Foundation/NSProcessInfo.h \
@@ -145,17 +142,24 @@ obj/Test.obj/PgStmt.m.o: PgStmt.m PgStmt.h \
  /usr/include/GNUstep/Foundation/NSXMLDTD.h \
  /usr/include/GNUstep/Foundation/NSXMLDTDNode.h \
  /usr/include/GNUstep/Foundation/NSXMLElement.h \
- /usr/include/GNUstep/Foundation/NSXMLParser.h PgConn.h Database.h
+ /usr/include/GNUstep/Foundation/NSXMLParser.h Database.h DbTemplates.h \
+ PgConn.h /usr/include/postgresql/libpq-fe.h \
+ /usr/include/postgresql/postgres_ext.h \
+ /usr/include/postgresql/pg_config_ext.h Statement.h
 
-PgStmt.h:
+DatabaseFactory.h:
 
-/usr/include/GNUstep/Foundation/NSObject.h:
-
-/usr/include/GNUstep/Foundation/NSObjCRuntime.h:
+/usr/include/GNUstep/Foundation/Foundation.h:
 
 /usr/include/GNUstep/GNUstepBase/GSVersionMacros.h:
 
 /usr/include/GNUstep/GNUstepBase/GSConfig.h:
+
+/usr/include/GNUstep/Foundation/FoundationErrors.h:
+
+/usr/include/GNUstep/Foundation/NSObject.h:
+
+/usr/include/GNUstep/Foundation/NSObjCRuntime.h:
 
 /usr/include/GNUstep/GNUstepBase/GNUstep.h:
 
@@ -168,18 +172,6 @@ PgStmt.h:
 /usr/include/GNUstep/Foundation/NSDate.h:
 
 /usr/include/GNUstep/GNUstepBase/NSObject+GNUstepBase.h:
-
-/usr/include/postgresql/libpq-fe.h:
-
-/usr/include/postgresql/postgres_ext.h:
-
-/usr/include/postgresql/pg_config_ext.h:
-
-Statement.h:
-
-/usr/include/GNUstep/Foundation/Foundation.h:
-
-/usr/include/GNUstep/Foundation/FoundationErrors.h:
 
 /usr/include/GNUstep/Foundation/NSDebug.h:
 
@@ -445,6 +437,16 @@ Statement.h:
 
 /usr/include/GNUstep/Foundation/NSXMLParser.h:
 
+Database.h:
+
+DbTemplates.h:
+
 PgConn.h:
 
-Database.h:
+/usr/include/postgresql/libpq-fe.h:
+
+/usr/include/postgresql/postgres_ext.h:
+
+/usr/include/postgresql/pg_config_ext.h:
+
+Statement.h:

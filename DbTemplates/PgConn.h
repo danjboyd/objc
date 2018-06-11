@@ -3,9 +3,13 @@
 
 #include <Foundation/NSObject.h>
 #include <libpq-fe.h>
-#include "PgStmt.h"
+//#include "PgStmt.h"
+#include "Database.h"
+#include "Statement.h"
 
-@interface PgConn : NSObject {
+@class Statement;
+
+@interface PgConn : NSObject <Database> {
     NSString * dsn;
     NSString * username;
     NSString * password;
@@ -16,7 +20,7 @@
 -(BOOL) connect;
 -(NSString*) error;
 -(PGconn*) pq_conn;
--(PgStmt*) prepare:(NSString*) query;
+-(Statement*) prepare:(NSString*) query;
 
 @end
 

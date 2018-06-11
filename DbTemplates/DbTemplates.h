@@ -24,8 +24,7 @@
 -(NSString*) firstMatch: (NSString*) regexPattern;
 -(BOOL) isEmptyOrWhitespace;
 
-@end
-
+@end 
 
 
 #endif /* _DBTEMPLATES_H_ */

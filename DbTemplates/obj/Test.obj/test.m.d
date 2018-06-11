@@ -145,7 +145,8 @@ obj/Test.obj/test.m.o: test.m \
  /usr/include/GNUstep/Foundation/NSXMLParser.h \
  /usr/include/postgresql/libpq-fe.h \
  /usr/include/postgresql/postgres_ext.h \
- /usr/include/postgresql/pg_config_ext.h PgConn.h PgStmt.h DbTemplates.h
+ /usr/include/postgresql/pg_config_ext.h PgConn.h Database.h Statement.h \
+ PgStmt.h DbTemplates.h DatabaseFactory.h
 
 /usr/include/GNUstep/Foundation/Foundation.h:
 
@@ -443,6 +444,12 @@ obj/Test.obj/test.m.o: test.m \
 
 PgConn.h:
 
+Database.h:
+
+Statement.h:
+
 PgStmt.h:
 
 DbTemplates.h:
+
+DatabaseFactory.h:

@@ -1,5 +1,6 @@
 #include "PgConn.h"
 #include <Foundation/Foundation.h>
+#include "PgStmt.h"
 
 @implementation PgConn
 
@@ -46,7 +47,7 @@
     return conn;
 }
 
--(PgStmt*) prepare:(NSString*) query {
+-(Statement*) prepare:(NSString*) query {
     return [[PgStmt alloc] initWithConn: self query: query];
 }
 

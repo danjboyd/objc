@@ -3,8 +3,9 @@
 
 #include <Foundation/NSObject.h>
 #include <libpq-fe.h>
+#include "Statement.h"
 
-@interface PgStmt : NSObject {
+@interface PgStmt : NSObject <Statement> {
     id conn;
     NSString * query;
     PGresult * res;

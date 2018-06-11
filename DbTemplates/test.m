@@ -5,50 +5,67 @@
 #include "PgConn.h"
 #include "PgStmt.h"
 #include "DbTemplates.h"
+#include "DatabaseFactory.h"
+#include "Database.h"
+#include "Statement.h"
 
 int main() {
     NSAutoreleasePool * pool = [NSAutoreleasePool new];
 
-    DbTemplates * t = [[DbTemplates alloc] initWithConfigFileName: @"dbtemplates"];
+//    DbTemplates * t = [[DbTemplates alloc] initWithConfigFileName: @"dbtemplates"];
+//
+//    NSDictionary * templates = [t defsForKeyword:@"template"];
+//    NSLog(@"%@", templates);
+//
+//    [t release];
 
-    NSDictionary * templates = [t defsForKeyword:@"template"];
-    NSLog(@"%@", templates);
+    id <Database> db = [DatabaseFactory databaseWithTemplateName:@"local"];
 
-    [t release];
-
-    [pool drain];
-}
-
-int main2() {
-    NSAutoreleasePool * pool = [NSAutoreleasePool new];
-
-    PgConn * pg = [[PgConn alloc] initWithDsn:@"host=localhost dbname=wrd_postgis"
-                                     username:@"danboyd"
-                                     password:nil];
-
-    if([pg connect]) {
-        printf("YES!\n");
-    } else {
-        NSLog(@"Connection Unsuccessful: %@", [pg error]);
-    }
-
-    PgStmt * stmt = [pg prepare: @"SELECT unitname FROM public.\"BurlesonUnitPlan\" WHERE formation = $1"];
-
-    if([stmt execute: [NSArray arrayWithObjects: @"Eagle Ford", nil]]) {
+    if(db) {
+        id <Statement>  stmt = [db prepare:@"SELECT unitname FROM public.\"BurlesonUnitPlan\""];
+        if(![stmt execute]) {
+            NSLog(@"Error: %@", [db error]);
+        }
         NSDictionary * row;
         while((row = [stmt fetchRow]) != nil) {
-            NSLog(@"%@", row);
+            NSLog(@"%@", [row objectForKey:@"unitname"]);
         }
-    } else {
-        NSLog(@"%@", [pg error]);
     }
-
-    [stmt release];
-    [pg release];
+    [db release];
 
     [pool drain];
-    return 1;
 }
+
+//int main2() {
+//    NSAutoreleasePool * pool = [NSAutoreleasePool new];
+//
+//    PgConn * pg = [[PgConn alloc] initWithDsn:@"host=localhost dbname=wrd_postgis"
+//                                     username:@"danboyd"
+//                                     password:nil];
+//
+//    if([pg connect]) {
+//        printf("YES!\n");
+//    } else {
+//        NSLog(@"Connection Unsuccessful: %@", [pg error]);
+//    }
+//
+//    PgStmt * stmt = [pg prepare: @"SELECT unitname FROM public.\"BurlesonUnitPlan\" WHERE formation = $1"];
+//
+//    if([stmt execute: [NSArray arrayWithObjects: @"Eagle Ford", nil]]) {
+//        NSDictionary * row;
+//        while((row = [stmt fetchRow]) != nil) {
+//            NSLog(@"%@", row);
+//        }
+//    } else {
+//        NSLog(@"%@", [pg error]);
+//    }
+//
+//    [stmt release];
+//    [pg release];
+//
+//    [pool drain];
+//    return 1;
+//}
 
 //PGconn * conn = NULL;
 //PGresult * res = NULL;

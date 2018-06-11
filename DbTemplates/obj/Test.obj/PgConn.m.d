@@ -11,7 +11,7 @@ obj/Test.obj/PgConn.m.o: PgConn.m PgConn.h \
  /usr/include/GNUstep/GNUstepBase/NSObject+GNUstepBase.h \
  /usr/include/postgresql/libpq-fe.h \
  /usr/include/postgresql/postgres_ext.h \
- /usr/include/postgresql/pg_config_ext.h PgStmt.h \
+ /usr/include/postgresql/pg_config_ext.h Database.h \
  /usr/include/GNUstep/Foundation/Foundation.h \
  /usr/include/GNUstep/Foundation/FoundationErrors.h \
  /usr/include/GNUstep/Foundation/NSDebug.h \
@@ -145,7 +145,7 @@ obj/Test.obj/PgConn.m.o: PgConn.m PgConn.h \
  /usr/include/GNUstep/Foundation/NSXMLDTD.h \
  /usr/include/GNUstep/Foundation/NSXMLDTDNode.h \
  /usr/include/GNUstep/Foundation/NSXMLElement.h \
- /usr/include/GNUstep/Foundation/NSXMLParser.h
+ /usr/include/GNUstep/Foundation/NSXMLParser.h Statement.h PgStmt.h
 
 PgConn.h:
 
@@ -175,7 +175,7 @@ PgConn.h:
 
 /usr/include/postgresql/pg_config_ext.h:
 
-PgStmt.h:
+Database.h:
 
 /usr/include/GNUstep/Foundation/Foundation.h:
 
@@ -444,3 +444,7 @@ PgStmt.h:
 /usr/include/GNUstep/Foundation/NSXMLElement.h:
 
 /usr/include/GNUstep/Foundation/NSXMLParser.h:
+
+Statement.h:
+
+PgStmt.h:
