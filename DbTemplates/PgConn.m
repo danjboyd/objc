@@ -47,7 +47,7 @@
     return conn;
 }
 
--(Statement*) prepare:(NSString*) query {
+-(id <Statement>) prepare:(NSString*) query {
     return [[PgStmt alloc] initWithConn: self query: query];
 }
 

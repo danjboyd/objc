@@ -7,8 +7,6 @@
 #include "Database.h"
 #include "Statement.h"
 
-@class Statement;
-
 @interface PgConn : NSObject <Database> {
     NSString * dsn;
     NSString * username;
@@ -20,7 +18,7 @@
 -(BOOL) connect;
 -(NSString*) error;
 -(PGconn*) pq_conn;
--(Statement*) prepare:(NSString*) query;
+-(id <Statement>) prepare:(NSString*) query;
 
 @end
 

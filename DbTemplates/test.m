@@ -8,29 +8,18 @@
 #include "DatabaseFactory.h"
 #include "Database.h"
 #include "Statement.h"
+#include "MySQLConn.h"
 
 int main() {
     NSAutoreleasePool * pool = [NSAutoreleasePool new];
 
-//    DbTemplates * t = [[DbTemplates alloc] initWithConfigFileName: @"dbtemplates"];
-//
-//    NSDictionary * templates = [t defsForKeyword:@"template"];
-//    NSLog(@"%@", templates);
-//
-//    [t release];
-
-    id <Database> db = [DatabaseFactory databaseWithTemplateName:@"local"];
+    id <Database> db = [DatabaseFactory databaseWithTemplateName: @"whr-title"];
 
     if(db) {
-        id <Statement>  stmt = [db prepare:@"SELECT unitname FROM public.\"BurlesonUnitPlan\""];
-        if(![stmt execute]) {
-            NSLog(@"Error: %@", [db error]);
-        }
-        NSDictionary * row;
-        while((row = [stmt fetchRow]) != nil) {
-            NSLog(@"%@", [row objectForKey:@"unitname"]);
-        }
+        NSLog(@"Yes!");
     }
+
+
     [db release];
 
     [pool drain];

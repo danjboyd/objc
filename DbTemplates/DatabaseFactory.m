@@ -1,6 +1,7 @@
 #include "DatabaseFactory.h"
 #include "DbTemplates.h"
 #include "PgConn.h"
+#include "MySQLConn.h"
 
 @implementation DatabaseFactory
 
@@ -25,7 +26,8 @@
 
     //check to see if they've explicitly set a server type
     NSString * dbtype = [template objectForKey:@"dbtype"];
-    id <Database> * conn;
+    #pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+    id <Database> conn;
     if(dbtype == nil) {
         //determine dbtype from dsn
         if([dsn rangeOfString: @"sybase" options: NSCaseInsensitiveSearch].location != NSNotFound ||
@@ -36,8 +38,26 @@
         }
         if([dsn rangeOfString: @"mysql" options: NSCaseInsensitiveSearch].location != NSNotFound)
         {
-            [NSException raise:@"Not Implemented" format:@"MySQL not yet implemented."];
-            return nil;
+            dsn = [dsn stringByReplacingOccurrencesOfString: @"dbi:mysql:" 
+                                                 withString: @"" 
+                                                    options: NSCaseInsensitiveSearch
+                                                      range: NSMakeRange(0, [dsn length])];
+            //grab parameters from dsn
+            NSArray * paramArray = [dsn splitWithRegex: @"\\s*;\\s*"];
+            NSMutableDictionary * params = [NSMutableDictionary dictionaryWithCapacity: [paramArray count]];
+            for(NSString * param in paramArray) {
+                NSArray * components = [param splitWithRegex: @"\\s*=\\s*"];
+                if([components count] == 2)
+                    [params setObject: [components objectAtIndex: 1]
+                               forKey: [components objectAtIndex: 0]];
+            }
+
+            conn = [[MySQLConn alloc] initWithHost: [params objectForKey: @"host"]
+                                              user: [template objectForKey: @"user"]
+                                          password: [template objectForKey: @"pass"]
+                                          database: [params objectForKey: @"database"]
+                                              port: [params objectForKey: @"port"]
+                                       unix_socket: [params objectForKey: @"mysql_socket"]];
         }
         if([dsn rangeOfString: @"dbi:pg" options: NSCaseInsensitiveSearch].location != NSNotFound)
         {
@@ -66,6 +86,7 @@
         [conn release];
         return nil;
     }
+    #pragma GCC diagnostic pop
 }
 
 @end
