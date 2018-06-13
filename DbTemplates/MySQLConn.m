@@ -65,7 +65,7 @@ const char * maybe_utf8_string(NSString * str) {
 }
 
 -(id <Statement>) prepare:(NSString*) query {
-    return nil;
+    return AUTORELEASE ( [[MySQLStmt alloc] initWithConn: self query: query] );
 }
 
 

@@ -9,7 +9,7 @@
     self = [super init];
     if(self) {
         conn = _conn;
-        query = _query;
+        query = [_query retain];
     }
     return self;
 }
@@ -101,6 +101,7 @@
 
 -(void) dealloc {
     PQclear(res);
+    [query release];
     [super dealloc];
 }
 

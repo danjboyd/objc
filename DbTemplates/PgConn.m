@@ -8,9 +8,9 @@
 {
     self = [super init];
     if(self) {
-        dsn = _dsn;
-        username = _username;
-        password = _password;
+        dsn = [_dsn retain];
+        username = [_username retain];
+        password = [_password retain];
     }
 
     return self;
@@ -40,6 +40,9 @@
 
 -(void) dealloc {
     PQfinish(conn);
+    [dsn release];
+    [username release];
+    [password release];
     [super dealloc];
 }
 
@@ -48,7 +51,7 @@
 }
 
 -(id <Statement>) prepare:(NSString*) query {
-    return [[PgStmt alloc] initWithConn: self query: query];
+    return AUTORELEASE( [[PgStmt alloc] initWithConn: self query: query] );
 }
 
 @end
