@@ -1,0 +1,361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7B81D7020D0C32300F5033A /* DbTemplates.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6420D0C32200F5033A /* DbTemplates.m */; };
+		A7B81D7120D0C32300F5033A /* PgStmt.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6520D0C32200F5033A /* PgStmt.m */; };
+		A7B81D7220D0C32300F5033A /* PgConn.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6620D0C32200F5033A /* PgConn.m */; };
+		A7B81D7320D0C32300F5033A /* DatabaseFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6920D0C32300F5033A /* DatabaseFactory.m */; };
+		A7B81D7420D0C32300F5033A /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6A20D0C32300F5033A /* test.m */; };
+		A7B81D7520D0C32300F5033A /* MySQLConn.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B81D6B20D0C32300F5033A /* MySQLConn.m */; };
+		A7B81D7B20D0CF5500F5033A /* libmysqlclient.18.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B81D7920D0CE9400F5033A /* libmysqlclient.18.dylib */; };
+		A7B81D7C20D0D01D00F5033A /* libpq.5.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B81D7720D0C49C00F5033A /* libpq.5.9.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A7B81D5720D0C2A300F5033A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A7B81D5920D0C2A300F5033A /* DbTemplates */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DbTemplates; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7B81D6320D0C32200F5033A /* Statement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statement.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6420D0C32200F5033A /* DbTemplates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbTemplates.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6520D0C32200F5033A /* PgStmt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PgStmt.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6620D0C32200F5033A /* PgConn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PgConn.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6720D0C32200F5033A /* DatabaseFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseFactory.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6820D0C32200F5033A /* PgConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PgConn.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6920D0C32300F5033A /* DatabaseFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseFactory.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6A20D0C32300F5033A /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6B20D0C32300F5033A /* MySQLConn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySQLConn.m; sourceTree = SOURCE_ROOT; };
+		A7B81D6C20D0C32300F5033A /* MySQLConn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySQLConn.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6D20D0C32300F5033A /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6E20D0C32300F5033A /* DbTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbTemplates.h; sourceTree = SOURCE_ROOT; };
+		A7B81D6F20D0C32300F5033A /* PgStmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PgStmt.h; sourceTree = SOURCE_ROOT; };
+		A7B81D7720D0C49C00F5033A /* libpq.5.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpq.5.9.dylib; path = ../../../../../Library/PostgreSQL/9.6/lib/libpq.5.9.dylib; sourceTree = "<group>"; };
+		A7B81D7920D0CE9400F5033A /* libmysqlclient.18.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmysqlclient.18.dylib; path = "../../../../../usr/local/mysql-connector-c-6.1.11-macos10.12-x86_64/lib/libmysqlclient.18.dylib"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7B81D5620D0C2A300F5033A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B81D7C20D0D01D00F5033A /* libpq.5.9.dylib in Frameworks */,
+				A7B81D7B20D0CF5500F5033A /* libmysqlclient.18.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7B81D5020D0C2A300F5033A = {
+			isa = PBXGroup;
+			children = (
+				A7B81D7920D0CE9400F5033A /* libmysqlclient.18.dylib */,
+				A7B81D5B20D0C2A300F5033A /* DbTemplates */,
+				A7B81D5A20D0C2A300F5033A /* Products */,
+				A7B81D7620D0C49B00F5033A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A7B81D5A20D0C2A300F5033A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7B81D5920D0C2A300F5033A /* DbTemplates */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7B81D5B20D0C2A300F5033A /* DbTemplates */ = {
+			isa = PBXGroup;
+			children = (
+				A7B81D6D20D0C32300F5033A /* Database.h */,
+				A7B81D6720D0C32200F5033A /* DatabaseFactory.h */,
+				A7B81D6920D0C32300F5033A /* DatabaseFactory.m */,
+				A7B81D6E20D0C32300F5033A /* DbTemplates.h */,
+				A7B81D6420D0C32200F5033A /* DbTemplates.m */,
+				A7B81D6C20D0C32300F5033A /* MySQLConn.h */,
+				A7B81D6B20D0C32300F5033A /* MySQLConn.m */,
+				A7B81D6820D0C32200F5033A /* PgConn.h */,
+				A7B81D6620D0C32200F5033A /* PgConn.m */,
+				A7B81D6F20D0C32300F5033A /* PgStmt.h */,
+				A7B81D6520D0C32200F5033A /* PgStmt.m */,
+				A7B81D6320D0C32200F5033A /* Statement.h */,
+				A7B81D6A20D0C32300F5033A /* test.m */,
+			);
+			path = DbTemplates;
+			sourceTree = "<group>";
+		};
+		A7B81D7620D0C49B00F5033A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7B81D7720D0C49C00F5033A /* libpq.5.9.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7B81D5820D0C2A300F5033A /* DbTemplates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7B81D6020D0C2A300F5033A /* Build configuration list for PBXNativeTarget "DbTemplates" */;
+			buildPhases = (
+				A7B81D5520D0C2A300F5033A /* Sources */,
+				A7B81D5620D0C2A300F5033A /* Frameworks */,
+				A7B81D5720D0C2A300F5033A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DbTemplates;
+			productName = DbTemplates;
+			productReference = A7B81D5920D0C2A300F5033A /* DbTemplates */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7B81D5120D0C2A300F5033A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Daniel;
+				TargetAttributes = {
+					A7B81D5820D0C2A300F5033A = {
+						CreatedOnToolsVersion = 9.4;
+					};
+				};
+			};
+			buildConfigurationList = A7B81D5420D0C2A300F5033A /* Build configuration list for PBXProject "DbTemplates" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A7B81D5020D0C2A300F5033A;
+			productRefGroup = A7B81D5A20D0C2A300F5033A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7B81D5820D0C2A300F5033A /* DbTemplates */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7B81D5520D0C2A300F5033A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7B81D7420D0C32300F5033A /* test.m in Sources */,
+				A7B81D7120D0C32300F5033A /* PgStmt.m in Sources */,
+				A7B81D7320D0C32300F5033A /* DatabaseFactory.m in Sources */,
+				A7B81D7020D0C32300F5033A /* DbTemplates.m in Sources */,
+				A7B81D7520D0C32300F5033A /* MySQLConn.m in Sources */,
+				A7B81D7220D0C32300F5033A /* PgConn.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A7B81D5E20D0C2A300F5033A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A7B81D5F20D0C2A300F5033A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A7B81D6120D0C2A300F5033A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2SV4Y2ZT8;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/mysql-connector-c-6.1.11-macos10.12-x86_64/include",
+					/Library/PostgreSQL/9.6/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/mysql-connector-c-6.1.11-macos10.12-x86_64/lib",
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/PostgreSQL/9.6/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lmysqlclient",
+					"-lpthread",
+					"-lz",
+					"-lpq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7B81D6220D0C2A300F5033A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A2SV4Y2ZT8;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/mysql-connector-c-6.1.11-macos10.12-x86_64/include",
+					/Library/PostgreSQL/9.6/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/mysql-connector-c-6.1.11-macos10.12-x86_64/lib",
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/PostgreSQL/9.6/lib",
+				);
+				OTHER_LDFLAGS = (
+					"-lmysqlclient",
+					"-lpthread",
+					"-lz",
+					"-lpq",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7B81D5420D0C2A300F5033A /* Build configuration list for PBXProject "DbTemplates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B81D5E20D0C2A300F5033A /* Debug */,
+				A7B81D5F20D0C2A300F5033A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7B81D6020D0C2A300F5033A /* Build configuration list for PBXNativeTarget "DbTemplates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7B81D6120D0C2A300F5033A /* Debug */,
+				A7B81D6220D0C2A300F5033A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7B81D5120D0C2A300F5033A /* Project object */;
+}
